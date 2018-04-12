@@ -64,7 +64,6 @@
 		</constructor-arg>
 	</bean>
 
-
 	<bean id="redisUtils" class="com.dingcheng.redis.util.RedisUtils">
 		<property name="jedisPool" ref="shardedJedisPool" />
 	</bean>
