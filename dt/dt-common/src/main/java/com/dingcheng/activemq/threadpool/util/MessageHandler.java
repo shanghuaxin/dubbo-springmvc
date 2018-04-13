@@ -5,7 +5,6 @@ import javax.jms.Message;
 
 /** 
  * 提供消息操作的回调接口 
- * @author linwei 
  * 
  */  
 public interface MessageHandler {  

@@ -1,10 +1,9 @@
 package com.dingcheng.activemq.threadpool.util;
 
-import java.util.concurrent.BlockingQueue;  
-import java.util.concurrent.LinkedBlockingQueue;  
-import java.util.concurrent.ThreadPoolExecutor;  
-import java.util.concurrent.TimeUnit;  
-import java.util.concurrent.locks.Condition;  
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;  
   
   
@@ -34,7 +33,7 @@ public class FixedAndBlockedThreadPoolExecutor extends ThreadPoolExecutor {
     public void execute(Runnable command) {  
         //进行同步锁定  
         this.lock.lock();  
-        super.execute(command);  
+        super.execute(command);
         try {  
             //如果线程池的数量已经达到最大线程池的数量,则进行挂起操作  
             if (getPoolSize() == getMaximumPoolSize()) {  
