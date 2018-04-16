@@ -37,6 +37,19 @@
 
 		</plugins>
 		<finalName>dt-web-user</finalName>
+		<outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <excludes>
+                    <exclude>**/.svn/</exclude>
+                </excludes>
+            </resource>
+        </resources>
 	</build>
 
 </project>
