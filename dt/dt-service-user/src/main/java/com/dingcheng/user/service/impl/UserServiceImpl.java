@@ -41,4 +41,10 @@ public class UserServiceImpl extends BaseServiceImpl<User> implements UserServic
 		// 综上操作后，token-->user
 		return user;
 	}
+
+	@Override
+	public User shiroUserLogin(User user) {
+		// TODO Auto-generated method stub
+		return userDaoImpl.shiroUserLogin(user.getLoginName());
+	}
 }

@@ -6,5 +6,6 @@ import com.dingcheng.user.model.User;
 public interface UserDao extends BaseDao<User>{
 
 	public User login(String loginName, String password);
+	public User shiroUserLogin(String loginName);
 }
 

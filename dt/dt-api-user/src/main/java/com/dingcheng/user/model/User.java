@@ -7,6 +7,7 @@ public class User implements Serializable {
 	private Integer id;
     private String loginName;
     private String password;
+    private String role;
     private String token;
     
 	public Integer getId() {
@@ -32,5 +33,11 @@ public class User implements Serializable {
 	}
 	public void setToken(String token) {
 		this.token = token;
+	}
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
 	}
 }

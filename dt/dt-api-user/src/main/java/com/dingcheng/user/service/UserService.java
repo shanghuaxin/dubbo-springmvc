@@ -5,4 +5,5 @@ import com.dingcheng.user.model.User;
 
 public interface UserService extends BaseService<User>{
 	public User login(String loginName, String password);
+	public User shiroUserLogin(User user);
 }

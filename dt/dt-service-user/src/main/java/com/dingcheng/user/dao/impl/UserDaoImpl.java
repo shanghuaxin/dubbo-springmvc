@@ -25,4 +25,16 @@ public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao {
 		}
 		return user;
 	}
+
+	@Override
+	public User shiroUserLogin(String loginName) {
+		User user = null;
+		Map<String, Object> map = new HashMap<>();
+		map.put("loginName", loginName);
+		List<User> list = super.findByMap(map);
+		if(list!=null && list.size()>0) {
+			user = list.get(0);
+		}
+		return user;
+	}
 }
